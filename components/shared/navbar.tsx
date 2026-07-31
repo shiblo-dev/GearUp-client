@@ -8,13 +8,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
- import { LayoutDashboard, LogOut, Settings, User } from "lucide-react";
+import { NavbarProps } from "@/lib/types";
+import { logout } from "@/service/logout";
+import { LayoutDashboard, LogOut, Settings, User } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { Button } from "../ui/button";
-import { NavbarProps } from "@/lib/types";
-import { logout } from "@/service/logout";
 
 // Navigation items configuration
 const navItems = [
@@ -22,7 +22,7 @@ const navItems = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
- ,
+ 
 ];
 
 // User menu items configuration
@@ -42,8 +42,8 @@ export function Navbar({user} : NavbarProps) {
       if(user.data.profile.role === "USER"){
         router.push("/dashboard")
       }
-      else if(user.data.profile.role === "AUTHOR"){
-        router.push("/author-dashboard")
+      else if(user.data.profile.role === "PROVIDER"){
+        router.push("/provider-dashboard")
       }
       else if(user.data.profile.role === "ADMIN"){
         router.push("/admin-dashboard")
@@ -66,7 +66,7 @@ export function Navbar({user} : NavbarProps) {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <span className="text-2xl font-bold text-primary">
-              GearUp
+            GearUp
             </span>
           </Link>
 
