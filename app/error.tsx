@@ -1,30 +1,26 @@
-'use client' // Error boundaries must be Client Components
+"use client";
 
-import { useEffect } from 'react'
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Error({
   error,
-  unstable_retry,
+  reset,
 }: {
-  error: Error & { digest?: string }
-  unstable_retry: () => void
+  error: Error & { digest?: string };
+  reset: () => void;
 }) {
   useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error)
-  }, [error])
+    console.error(error);
+  }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
-      <button
-        onClick={
-          // Attempt to recover by re-fetching and re-rendering the segment
-          () => unstable_retry()
-        }
-      >
-        Try again
-      </button>
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 text-center px-4">
+      <h2 className="text-xl font-semibold">Something went wrong!</h2>
+      <p className="text-muted-foreground text-sm">
+        {error.message || "An unexpected error has occurred."}
+      </p>
+      <Button onClick={() => reset()}>Try Again</Button>
     </div>
-  )
+  );
 }
