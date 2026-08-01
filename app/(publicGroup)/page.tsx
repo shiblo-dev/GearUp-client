@@ -1,12 +1,17 @@
- import React from 'react'
+import Categories from "@/components/home/Categories";
+import FeaturedGear from "@/components/home/FeaturedGear";
+import Hero from "@/components/home/Hero";
+import HowItWorks from "@/components/home/HowItWorks";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 
- const HomePage = () => {
-   return (
-     <div>HomePage
-
-        <h1>welcome to home page</h1>
-     </div>
-   )
- }
-
- export default HomePage
+export default function HomePage() {
+  return (
+    <main>
+      <Hero />
+      <Categories />
+      <FeaturedGear />
+       <WhyChooseUs />
+       <HowItWorks />
+    </main>
+  );
+}
