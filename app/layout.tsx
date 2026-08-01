@@ -1,13 +1,23 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { Toaster } from "sonner";
+ import { Toaster } from "sonner";
+import { AuthInitializer } from "@/components/AuthInitializer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-export const metadata = {
-  title: "Gear Up",
-  description: "Gear Up is a web application that helps you manage your gear and equipment efficiently.",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "GearUp — Rent Sports & Outdoor Gear Instantly",
+  description:
+    "Browse, rent, and manage sports and outdoor equipment easily with GearUp.",
 };
 
 export default function RootLayout({
@@ -16,13 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cn("h-full", "antialiased", "font-sans", inter.variable)}
-    >
-      <body className="min-h-full flex flex-col">
-        <Toaster position="top-right" richColors />
-        {children}
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <AuthInitializer>{children}</AuthInitializer>
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );
