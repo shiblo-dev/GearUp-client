@@ -36,7 +36,7 @@ export const useAuthStore = create<AuthState>()(
     }),
     {
       name: "gearup-auth-storage",
-      partialize: (state) => ({ user: state.user }), // শুধু user data persist করব, loading state না
+      partialize: (state) => ({ user: state.user }),  
     }
   )
 );
