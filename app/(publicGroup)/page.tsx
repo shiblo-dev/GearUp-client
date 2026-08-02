@@ -1,6 +1,7 @@
 import Categories from "@/components/home/Categories";
 import FAQ from "@/components/home/FAQ";
 import FeaturedGear from "@/components/home/FeaturedGear";
+import Footer from "@/components/home/Footer";
 import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/HowItWorks";
 import Stats from "@/components/home/Stats";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Stats />
       <Testimonials />
       <FAQ />
+      <Footer />
     </main>
   );
 }
