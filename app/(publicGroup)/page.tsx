@@ -17,14 +17,7 @@ export default function HomePage() {
       <Hero />
       <Categories />
       <FeaturedGear />
-       <WhyChooseUs />
-       <HowItWorks />
-        <Stats />
-         <Testimonials />
-         <BecomeProvider />
-          <Newsletter />
-           <FAQ />
-            <Footer />
+        
 
     </main>
   );
