@@ -1,4 +1,5 @@
 import Categories from "@/components/home/Categories";
+import FAQ from "@/components/home/FAQ";
 import FeaturedGear from "@/components/home/FeaturedGear";
 import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <HowItWorks />
       <Stats />
       <Testimonials />
+      <FAQ />
     </main>
   );
 }
