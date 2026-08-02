@@ -69,3 +69,32 @@ export const featuredGear = [
     available: false,
   },
 ];
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Ahmed",
+    role: "Adventure Traveler",
+    image: "https://i.pravatar.cc/150?img=12",
+    rating: 5,
+    review:
+      "The booking process was incredibly smooth. The camping gear was clean and exactly as described.",
+  },
+  {
+    id: 2,
+    name: "Tanvir Hasan",
+    role: "Cyclist",
+    image: "https://i.pravatar.cc/150?img=33",
+    rating: 5,
+    review:
+      "Instead of buying an expensive bike, I rented one for my weekend trip. Highly recommended!",
+  },
+  {
+    id: 3,
+    name: "Emily Watson",
+    role: "Hiking Enthusiast",
+    image: "https://i.pravatar.cc/150?img=25",
+    rating: 5,
+    review:
+      "Amazing quality equipment and excellent customer service. I'll definitely rent again.",
+  },
+];
