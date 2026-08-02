@@ -3,6 +3,7 @@ import FeaturedGear from "@/components/home/FeaturedGear";
 import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/HowItWorks";
 import Stats from "@/components/home/Stats";
+import Testimonials from "@/components/home/Testimonials";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 
 export default function HomePage() {
@@ -14,7 +15,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <HowItWorks />
       <Stats />
-
+      <Testimonials />
     </main>
   );
 }
