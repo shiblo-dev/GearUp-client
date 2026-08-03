@@ -8,7 +8,7 @@ GearUp - Sports & Outdoor Gear Rental Platform
 GearUp is a modern and responsive sports & outdoor equipment rental platform built with Next.js 16, TypeScript, Tailwind CSS, and shadcn/ui. The platform allows customers to rent sports gear, providers to manage their equipment listings, and administrators to monitor the entire system.
 
 🌐 Live Demo
-Frontend:  
+Frontend:https://gear-up-client-one.vercel.app
 Backend API:https://gear-up-chi-one.vercel.app
 🚀 Features
 👤 Customer
