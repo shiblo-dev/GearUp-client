@@ -23,8 +23,8 @@ export function useAuth() {
       }
     };
 
-    fetchUser(); 
-  }, []);
+    fetchUser();
+  }, [setUser, clearUser, setLoading]);
 
   return { user, isAuthenticated, isLoading };
 }

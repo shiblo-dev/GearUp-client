@@ -4,8 +4,7 @@ import * as React from "react";
 import {
   createContext,
   useContext,
-  useState,
-  useEffect,
+  useState, 
   useCallback,
 } from "react";
 import { useRouter } from "next/navigation";
@@ -63,9 +62,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
-    fetchCurrentUser();
-  }, [fetchCurrentUser]);
 
   const login = useCallback(
     async (email: string, password: string) => {

@@ -113,10 +113,11 @@ if(redirectTo && typeof redirectTo === "string" && redirectTo.startsWith("/") &&
             body: JSON.stringify(payload)
         });
     } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : "something went wrong";
         return {
             success: false,
             statusCode: 500,
-            message: "internal server error",
+            message,
         }
     }
 

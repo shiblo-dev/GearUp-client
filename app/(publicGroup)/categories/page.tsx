@@ -1,8 +1,9 @@
+import Categories from '@/components/home/Categories'
 import React from 'react'
 
 const CategoriesPage = () => {
   return (
-    <div>CategoriesPage</div>
+    <div><Categories /></div>
   )
 }
 

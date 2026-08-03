@@ -1,10 +1,10 @@
 import HowItWorks from '@/components/home/HowItWorks'
 import React from 'react'
 
-const ContactPage = () => {
+const  HowItWorksPage = () => {
   return (
-    <div><HowItWorks /></div>
+    <div> <HowItWorks /></div>
   )
 }
 
-export default ContactPage
+export default  HowItWorksPage
